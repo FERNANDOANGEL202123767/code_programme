@@ -15,8 +15,8 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 - [Node.js](https://nodejs.org/) (versión 18.x o superior)
 - [npm](https://www.npmjs.com/)
 
-> .[!TIP].
->  Si no tienes Node.js actualizado o instalado, sigue los pasos de la siguiente sección para instalarlo correctamente usando `nvm`.
+> [!TIP]
+> Si no tienes Node.js actualizado o instalado, sigue los pasos de la siguiente sección para instalarlo correctamente usando `nvm`.
 
 ### 1. Instalación de Node.js (si es necesario)
 
@@ -46,7 +46,7 @@ Clona este repositorio en tu máquina local:
    ```bash
    git clone https://github.com/[tu_usuario]/code_programmer.git
    cd code_programmer
->.[!NOTE].
+> [!NOTE]
 > Asegúrate de estar en el directorio correcto antes de seguir con los siguientes pasos.
 ### 3. Configuración de Docker
 
@@ -63,7 +63,7 @@ Clona este repositorio en tu máquina local:
 1. Si no tienes los datos iniciales, asegúrate de tener un archivo **init.sql** en el directorio **sql-scripts**:
    ```bash
    docker exec -i mysql-db mysql -uroot -pcode2024 c_program < sql-scripts/init.sql
-> .[!IMPORTANT].
+> [!IMPORTANT]
 > Asegúrate de que el archivo init.sql exista y esté correctamente estructurado.
 ### 5. Ejecutar la Aplicación Frontend
 
@@ -105,6 +105,7 @@ La aplicación estará disponible en **http://localhost:3010**
 3. La configuración de **nvm** y **node** esté correcta.
 4. Verifica las versiones de Node.js y npm.
    Puedes reiniciar Docker y reconstruir los contenedores con el siguiente comando:
+   ```bash
      docker-compose down && docker-compose up --build
 
 
