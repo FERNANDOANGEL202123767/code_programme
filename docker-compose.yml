@@ -7,6 +7,8 @@ services:
       MYSQL_DATABASE: c_program
     ports:
       - "3307:3306"
+       volumes:
+      - ./sql-scripts:/docker-entrypoint-initdb.d
   
   auth-service:
     build: ./auth-service
