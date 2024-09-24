@@ -1,6 +1,10 @@
 # Code Programmer Microservices Project
 
+<img src="https://github.com/FERNANDOANGEL202123767/code_programmer/blob/master/assets/images/code.png?raw=true" alt="Code Programmer Banner" style="width:100%; height:auto;" />
+
 Este proyecto consiste en una arquitectura de microservicios para gestionar varios módulos como autenticación, pagos, certificados, notificaciones, y más. Cada microservicio se ejecuta en Docker y se comunica a través de una API Gateway.
+
+---
 
 ## Prerrequisitos
 
@@ -11,12 +15,15 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 - [Node.js](https://nodejs.org/) (versión 18.x o superior)
 - [npm](https://www.npmjs.com/)
 
+> .[!TIP]. Si no tienes Node.js actualizado o instalado, sigue los pasos de la siguiente sección para instalarlo correctamente usando `nvm`.
+
 ### 1. Instalación de Node.js (si es necesario)
 
 1. Si no tienes Node.js actualizado o instalado, puedes usar `nvm` para gestionar las versiones:
 
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
 
 2. Carga **nvm** y asegúrate de que esté instalado correctamente:
    source ~/.bashrc
@@ -32,6 +39,7 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 Clona este repositorio en tu máquina local:
   git clone https://github.com/[tu_usuario]/code_programmer.git
   cd code_programmer
+  .[!NOTE]. Asegúrate de estar en el directorio correcto antes de seguir con los siguientes pasos.
 ### 3. Configuración de Docker
 
   Este proyecto utiliza Docker para ejecutar los microservicios y la base de datos MySQL. Asegúrate de tener Docker instalado y ejecutándose.
@@ -44,6 +52,7 @@ Clona este repositorio en tu máquina local:
   Al levantar el contenedor de MySQL, se crea automáticamente la base de datos **c_program**. Si deseas poblar la base de datos con datos iniciales, puedes usar un script SQL.
   Si no tienes los datos iniciales, asegúrate de tener un archivo **init.sql** en el directorio **sql-scripts**:
   docker exec -i mysql-db mysql -uroot -pcode2024 c_program < sql-scripts/init.sql
+   .[!IMPORTANT]. Asegúrate de que el archivo init.sql exista y esté correctamente estructurado.
 ### 5. Ejecutar la Aplicación Frontend
 
 1. Ve al directorio del frontend:
