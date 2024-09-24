@@ -1,0 +1,67 @@
+version: '3'
+services:
+  database:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: code2024
+      MYSQL_DATABASE: c_program
+    ports:
+      - "3307:3306"
+  
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "3001:3001"
+    depends_on:
+      - database
+
+  payment-service:
+    build: ./payment-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - database
+
+  certificate-service:
+    build: ./certificate-service
+    ports:
+      - "3003:3003"
+    depends_on:
+      - database
+
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "3004:3004"
+    depends_on:
+      - database
+
+  feedback-service:
+    build: ./feedback-service
+    ports:
+      - "3005:3005"
+    depends_on:
+      - database
+
+  material-calendar-service:
+    build: ./material-calendar-service
+    ports:
+      - "3006:3006"
+    depends_on:
+      - database
+
+  db-service:
+    build: ./db-service
+    depends_on:
+      - database
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3010:3000" 
