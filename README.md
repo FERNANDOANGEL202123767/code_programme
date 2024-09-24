@@ -44,7 +44,7 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 Clona este repositorio en tu máquina local:
 1. clona:
    ```bash
-   git clone https://github.com/[tu_usuario]/code_programmer.git
+   git clone https://github.com/FERNANDOANGEL202123767/code_programmer.git
    cd code_programmer
 > [!NOTE]
 > Asegúrate de estar en el directorio correcto antes de seguir con los siguientes pasos.
