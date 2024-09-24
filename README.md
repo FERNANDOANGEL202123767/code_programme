@@ -1,6 +1,6 @@
 # Code Programmer Microservices Project
 
-<img src="https://github.com/FERNANDOANGEL202123767/code_programmer/blob/master/assets/images/code.png?raw=true" alt="Code Programmer Banner" style="width:100%; height:auto;" />
+<img src="https://github.com/FERNANDOANGEL202123767/code_programmer/assets/images/code.png?raw=true" alt="Code Programmer Banner" style="width:100%; height:auto;" />
 
 Este proyecto consiste en una arquitectura de microservicios para gestionar varios módulos como autenticación, pagos, certificados, notificaciones, y más. Cada microservicio se ejecuta en Docker y se comunica a través de una API Gateway.
 
