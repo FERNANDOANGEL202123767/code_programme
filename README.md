@@ -78,6 +78,7 @@ La aplicación estará disponible en **http://localhost:3010**
 4. Verifica las versiones de Node.js y npm.
    Puedes reiniciar Docker y reconstruir los contenedores con el siguiente comando:
      docker-compose down && docker-compose up --build
+Prueba
 
 
 
