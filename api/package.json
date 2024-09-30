@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api": "file:",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "i": "^0.3.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0",
+    "moongose": "^1.0.0",
+    "nodemon": "^3.1.7",
+    "npm": "^10.8.3",
+    "react-scripts": "^5.0.1"
+  },
+  "description": ""
+}
