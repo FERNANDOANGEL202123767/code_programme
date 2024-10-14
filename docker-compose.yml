@@ -7,7 +7,7 @@ services:
       MYSQL_DATABASE: c_program
     ports:
       - "3307:3306"
-       volumes:
+    volumes:  # Aquí corregí la alineación
       - ./sql-scripts:/docker-entrypoint-initdb.d
   
   auth-service:
@@ -66,4 +66,4 @@ services:
     build:
       context: ./frontend
     ports:
-      - "3010:3000" 
+      - "3010:3000"
