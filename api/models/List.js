@@ -1,6 +1,7 @@
 /**
  * modelo lista.js
  * @author Jonathan Hernandez
+ *BACKEND
  */
 const mongoose = require("mongoose");
 
