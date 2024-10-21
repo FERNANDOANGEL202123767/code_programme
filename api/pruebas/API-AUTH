@@ -1,0 +1,1 @@
+{"driver":true,"name":"MongoError","index":0,"code":11000,"keyPattern":{"username":1},"keyValue":{"username":"lama"}}
