@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  analytics-service:
+    build:
+      context: ./analytics-service
+    ports:
+      - "8040:8004"
+
+  course-management:
+    build:
+      context: ./course-management
+    ports:
+      - "8030:8003"
+
+  layout-management:
+    build:
+      context: ./layout-management
+    ports:
+      - "8010:8001"
+
+  notification-service:
+    build:
+      context: ./notification-service
+    ports:
+      - "8050:8005"
+
+  order-management:
+    build:
+      context: ./order-management
+    ports:
+      - "8060:8006"
+
+  payment-management:
+    build:
+      context: ./payment-management
+    ports:
+      - "8070:8007"
+
+  user-management:
+    build:
+      context: ./user-management
+    ports:
+      - "8020:8002"
