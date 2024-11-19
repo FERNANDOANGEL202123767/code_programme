@@ -1,0 +1,65 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Run analytics: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\analytics-service"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run course: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\course-management"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run layout: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\layout-management"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run notification: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\notification-service"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run order: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\order-management"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run payment: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\payment-management"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run user: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\backend\\user-management"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run frontend: start",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}\\frontend"
+        }
+        
+    ]
+}
