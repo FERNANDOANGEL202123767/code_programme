@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: course-management
+  template:
+    metadata:
+      labels:
+        app: course-management
+    spec:
+      containers:
+      - name: course-management
+        image: backend-analytics-service:latest
+        ports:
+        - containerPort: 8030
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: course-management
+spec:
+  selector:
+    app: course-management
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8030

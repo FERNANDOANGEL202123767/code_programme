@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-management
+  template:
+    metadata:
+      labels:
+        app: payment-management
+    spec:
+      containers:
+      - name: payment-management
+        image: backend-payment-management:latest
+        ports:
+        - containerPort: 8070
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-management
+spec:
+  selector:
+    app: payment-management
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8070
