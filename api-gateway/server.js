@@ -3,26 +3,36 @@ const express = require('express');
 const request = require('request');
 
 const app = express();
-const PORT = 3000; // Puerto para el API Gateway
+const PORT = 3016;
 
 app.use(express.json());
 
-// Proxy para la ruta de autenticación
-app.use('/auth', (req, res) => {
-  request({ url: `http://localhost:3001${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
-    res.status(response.statusCode).send(body);
-  });
+// Proxies para las rutas de los servicios
+
+app.use('/api/auth', (req, res) => {
+    request({ url: `http://localhost:8800/api/auth${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
+        res.status(response?.statusCode || 500).send(body);
+    });
 });
 
-// Proxy para la ruta de pago
-app.use('/pay', (req, res) => {
-  request({ url: `http://localhost:3002${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
-    res.status(response.statusCode).send(body);
-  });
+app.use('/api/users', (req, res) => {
+    request({ url: `http://localhost:8800/api/users${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
+        res.status(response?.statusCode || 500).send(body);
+    });
 });
 
-// Agrega más rutas según sea necesario...
+app.use('/api/movies', (req, res) => {
+    request({ url: `http://localhost:8800/api/movies${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
+        res.status(response?.statusCode || 500).send(body);
+    });
+});
+
+app.use('/api/lists', (req, res) => {
+    request({ url: `http://localhost:8800/api/lists${req.url}`, method: req.method, json: req.body }, (error, response, body) => {
+        res.status(response?.statusCode || 500).send(body);
+    });
+});
 
 app.listen(PORT, () => {
-  console.log(`API Gateway corriendo en http://localhost:${PORT}`);
+    console.log(`API Gateway running on http://localhost:${PORT}`);
 });

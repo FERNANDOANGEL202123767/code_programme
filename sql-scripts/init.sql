@@ -1,4 +1,4 @@
-CREATE DATABASE c_program;
+CREATE DATABASE IF NOT EXISTS c_program;
 use c_program;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;

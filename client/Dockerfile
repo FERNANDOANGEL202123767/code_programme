@@ -6,14 +6,15 @@ WORKDIR /app
 
 # Copia el archivo package.json e instala dependencias
 COPY package.json package-lock.json ./
-RUN npm install  
+RUN yarn install
 
 # Copia todo el código
 COPY . .
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Construir el proyecto
-RUN npm run build
+RUN yarn build
+
 
 # Servir la aplicación usando un servidor web simple
 RUN npm install -g serve
