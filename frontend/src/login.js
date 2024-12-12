@@ -14,12 +14,12 @@ const Login = () => {
     e.preventDefault();
     try {
       const userData = await authenticateUser(credentials);
-      console.log('User authenticated:', userData);
+      console.log('Usuario Autenticado:', userData);
       // Aquí puedes manejar el token o redirigir al usuario
       // Por ejemplo: localStorage.setItem('token', userData.token);
     } catch (error) {
-      setErrorMessage('Authentication failed. Please try again.');
-      console.error('Authentication failed:', error);
+      setErrorMessage('Autenticación fallida. Por favor intentalo de nuevo.');
+      console.error('Autenticación fallida:', error);
     }
   };
 
