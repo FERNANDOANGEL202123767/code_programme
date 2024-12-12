@@ -1,8 +1,12 @@
 // src/Login.js
+// IMportar React y useState para manejar el estado del componente.
 import React, { useState } from 'react';
+// Importar la función de autenticación desde el modulo api/aut.
 import { authenticateUser } from './api/auth';
 
+// Define el componente funcional Login.
 const Login = () => {
+  // Define el estado inicial para als credenciales del usuario y el mensaje de error.
   const [credentials, setCredentials] = useState({ username: '', password: '' });
   const [errorMessage, setErrorMessage] = useState('');
 
